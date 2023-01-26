@@ -8,6 +8,8 @@ from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 
+print(os.environ)
+
 
 def parse_events(content: BeautifulSoup) -> str:
     """
