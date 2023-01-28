@@ -88,7 +88,8 @@ def scrapper(target_url: str = None, mode: str = "events") -> None:
 
 if __name__ == "__main__":
 
-    urls = []
-    urls.append(os.environ["TARGET_URL"])
+    urls = [
+        "https://www.whoscored.com/Matches/1640876/Live/England-Premier-League-2022-2023-Arsenal-Manchester-United"
+    ]
     for url in urls:
         print(scrapper(target_url=url))
