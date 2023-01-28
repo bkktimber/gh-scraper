@@ -76,6 +76,7 @@ def scrapper(target_url: str = None, mode: str = "events") -> None:
     for option in options:
         chrome_options.add_argument(option)
     driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
+    driver.get(target_url)
     content = BeautifulSoup(driver.page_source, features="html.parser")
 
     data = preprocess(parse_events(content))
